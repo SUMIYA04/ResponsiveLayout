@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        "form form from"
+        "blank blank blank"
+        "header header header"
+        "feature feature feature"
+    ;
+    height: 100vh;
+}
+
+.form {
+    grid-area: form;
+}
+
+.blank {
+    grid-area: blank;
+}
+
+.header {
+    grid-area: header;
+}
+
+.feature {
+    grid-area: feature;
+}
+
+.form .search {
+    border: 1px solid grey;
+    width: 80%;
+
+}
+
+.form .right {
+
+    border-radius: 14px;
+    width: 10px;
+    margin-left: 5px;
+    float: right;
+
+}
+
+hr {
+    border: 1px solid black;
+}
+
+.blank {
+
+    background-color: rgb(73, 175, 209);
+    border-color: blue;
+    text-align: center;
+    padding: 10px;
+    margin-top: 1px;
+}
+
+.header {
+
+    background-color: aqua;
+
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.feature {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.features {
+    width: 100%;
+    text-align: center;
+    padding: 40px 40px;
+    background-color: purple;
+
+
+}
+
+.features2 {
+    width: 100%;
+    text-align: center;
+    padding: 40px 40px;
+
+    background-color: rgb(90, 128, 0);
+
+
+}
+
+.features3 {
+
+    width: 100%;
+    padding: 40px 40px;
+    text-align: center;
+    background-color: rgb(128, 28, 0);
+
+
+}
+
+@media (max-width: 780px) {
+    .feature {
+        flex-direction: column;
+
+    }
+}
+
+@media (max-width: 400px) {
+    .feature {
+        flex-direction: column;
+
+    }
+}
